@@ -12,6 +12,8 @@ public class LoginController {
     public String login(Principal principal) {
 
         if (principal != null) {
+        	System.out.println(principal.getName());
+        	System.err.println(principal);
             return "redirect:/home";
         }
         return "/login";
